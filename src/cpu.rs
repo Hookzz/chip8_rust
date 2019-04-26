@@ -69,7 +69,13 @@ impl Cpu {
 				self.pc += 2;
 			}
 			0x8 => {
-				match 
+				match n {
+					0 => {
+						let mut v= self.read_reg_vx(x);
+						vx = self.write_reg_vx(x, y);
+					}
+					_ => panic!("Instruction inconnue {:#X}:{:#X}", self.pc, opcode),
+				}
 			}
 			0xA => {
 				// SET I TO NNN

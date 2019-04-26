@@ -1,0 +1,7 @@
+[package]
+name = "chip8_emu"
+version = "0.1.0"
+authors = ["Hookz"]
+edition = "2018"
+
+[dependencies]
